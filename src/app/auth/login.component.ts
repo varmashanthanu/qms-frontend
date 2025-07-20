@@ -6,6 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -26,7 +28,11 @@ export class LoginComponent {
   loginForm: FormGroup;
   loginError: string | null = null;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -42,7 +48,7 @@ export class LoginComponent {
         next: (res) => {
           this.authService.storeTokens(res.access, res.refresh);
           console.log('Login successful');
-          // TODO: Navigate to dashboard or home
+          this.router.navigate(['/staff-dashboard']);
         },
         error: (err) => {
           console.error('Login failed:', err);
