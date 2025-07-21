@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from '../../environment';
 
 interface LoginPayload {
   username: string;
@@ -18,7 +19,7 @@ interface LoginResponse {
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8000/api/v1/auth/login/';
+  private apiUrl = `${environment.apiBaseUrl}auth/login/`;
   private router = inject(Router);
 
   login(payload: LoginPayload): Observable<LoginResponse> {
@@ -46,7 +47,7 @@ export class AuthService {
 
   refreshToken() {
     return this.http.post<{ access: string }>(
-      'http://localhost:8000/api/v1/auth/refresh/', // your refresh endpoint
+      `${environment.apiBaseUrl}auth/refresh/`, // your refresh endpoint
       { refresh: this.getRefreshToken() }
     );
   }
