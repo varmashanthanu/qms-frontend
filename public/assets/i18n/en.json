@@ -1,0 +1,17 @@
+{
+  "CALL": "Call",
+  "COMPLETE": "Complete",
+  "CREATED AT": "Created At",
+  "IN_PROGRESS": "In Progress",
+  "LOADING TICKETS": "Loading tickets",
+  "LOGIN": "Login",
+  "LOGOUT": "Logout",
+  "PASSWORD": "Password",
+  "SERVE": "Serve",
+  "SKIP": "Skip",
+  "STATUS": "Status",
+  "TICKET": "Ticket",
+  "TITLE": "Queue Management System",
+  "TRANSFER": "Transfer",
+  "USERNAME": "Username"
+}

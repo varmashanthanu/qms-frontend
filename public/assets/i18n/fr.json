@@ -1,0 +1,17 @@
+{
+  "CALL": "Appel",
+  "COMPLETE": "Terminer",
+  "CREATED AT": "Créé le",
+  "IN_PROGRESS": "En cours",
+  "LOADING TICKETS": "Chargement des tickets",
+  "LOGIN": "Connexion",
+  "LOGOUT": "Déconnexion",
+  "PASSWORD": "Mot de passe",
+  "SERVE": "Servir",
+  "SKIP": "Sauter",
+  "STATUS": "Statut",
+  "TICKET": "Ticket",
+  "TITLE": "Système de Gestion des Files",
+  "TRANSFER": "Transférer",
+  "USERNAME": "Nom d'utilisateur"
+}

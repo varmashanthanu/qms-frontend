@@ -31,3 +31,15 @@ mat-toolbar button {
   margin-right: 12px;
   border-radius: 100%;
 }
+
+mat-toolbar .language-selector {
+  margin-left: auto; /* Push the selector to the right */
+  select {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+  }
+}

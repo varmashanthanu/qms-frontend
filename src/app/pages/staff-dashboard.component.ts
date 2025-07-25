@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-staff-dashboard',
@@ -14,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     CommonModule,
     MatButtonModule,
+    TranslatePipe,
   ]
 })
 export class StaffDashboardComponent implements OnInit {

@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <mat-sidenav-container class="layout-container">
 <!--  <mat-sidenav #drawer mode="side" opened="false">-->
 <!--    &lt;!&ndash; Side nav content (e.g. nav links) &ndash;&gt;-->
@@ -10,7 +11,15 @@
 <!--        <mat-icon>menu</mat-icon>-->
 <!--      </button>-->
       <img src="assets/logo.png" alt="Logo" class="logo" />
-      <span class="toolbar-title">Queue Management System</span>
+      <span class="toolbar-title">{{ 'TITLE' | translate}}</span>
+
+      <div class="language-selector">
+        <select (change)="switchLang($event)">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+
     </mat-toolbar>
 
     <div class="main-content">
