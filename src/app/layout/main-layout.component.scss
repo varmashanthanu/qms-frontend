@@ -5,3 +5,29 @@
 .main-content {
   padding: 16px;
 }
+
+mat-toolbar {
+  color: white; // Ensures all text/icons are white
+  //background-color: mat.get-color-from-palette($primary-palette, 500); // Optional if you want a specific shade
+  background-color: blue;
+}
+
+mat-toolbar .mat-icon {
+  color: white; // Ensures the menu icon is also white
+}
+
+mat-toolbar button {
+  color: white; // Ensures button icons stay white
+}
+
+.toolbar-title {
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 100%;
+}

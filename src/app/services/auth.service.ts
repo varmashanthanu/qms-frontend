@@ -45,10 +45,14 @@ export class AuthService {
     return localStorage.getItem('refresh_token');
   }
 
-  refreshToken() {
+  refreshToken(): Observable<{ access: string }> {
+    const refresh = this.getRefreshToken();
+    if (!refresh) {
+      throw new Error('No refresh token available');
+    }
     return this.http.post<{ access: string }>(
-      `${environment.apiBaseUrl}auth/refresh/`, // your refresh endpoint
-      { refresh: this.getRefreshToken() }
+      `${environment.apiBaseUrl}auth/refresh/`,
+      { refresh }
     );
   }
 
@@ -56,4 +60,26 @@ export class AuthService {
     this.clearTokens();
     this.router.navigate(['/login']);
   }
+
+  isTokenExpired(token: string): boolean {
+    try {
+      const [, payload] = token.split('.');
+      const decoded = JSON.parse(atob(payload));
+      return decoded.exp * 1000 < Date.now();
+    } catch (e) {
+      return true; // If parsing fails, treat as expired
+    }
+  }
+
+  // getValidAccessToken(): Observable<string> {
+  //   const access = this.getAccessToken();
+  //   if (access && !this.isTokenExpired(access)) {
+  //     return of(access);
+  //   } else {
+  //     return this.refreshToken().pipe(
+  //       tap(response => this.storeTokens(response.access, this.getRefreshToken()!)),
+  //       map(response => response.access)
+  //     );
+  //   }
+  // }
 }
