@@ -1,0 +1,23 @@
+// Create a variable for opacity
+$opacity-level: 0.5;
+
+.call:hover {
+  background: rgba(blue, $opacity-level);
+  color: whitesmoke;
+
+}
+
+.complete:hover {
+  background: rgba(green, $opacity-level);
+  color: whitesmoke;
+}
+
+.skip:hover {
+  background: rgba(red, $opacity-level);
+  color: whitesmoke;
+}
+
+.transfer:hover {
+  background: rgba(orange, $opacity-level);
+  color: whitesmoke;
+}

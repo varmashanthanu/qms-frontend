@@ -6,11 +6,14 @@
       <p>{{ 'CREATED AT' | translate }}: {{ ticket.created_at | date:'short' }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button color="primary" (click)="handleAction(ticket.id, 'call')">{{ 'CALL' | translate }}</button>
-      <button mat-button color="accent" (click)="handleAction(ticket.id, 'serve')">{{ 'SERVE' | translate }}</button>
-      <button mat-button (click)="handleAction(ticket.id, 'complete')">{{ 'COMPLETE' | translate }}</button>
-      <button mat-button color="warn" (click)="handleAction(ticket.id, 'skip')">{{ 'SKIP' | translate }}</button>
-      <button mat-button color="warn" (click)="handleAction(ticket.id, 'transfer')">{{ 'TRANSFER' | translate }}</button>
+      <button mat-button class="call" *ngIf="ticket.status === 'pending'"
+              (click)="handleAction(ticket.id, 'call')">{{ 'CALL' | translate }}</button>
+      <button mat-button class="complete" *ngIf="ticket.status === 'in_progress'"
+              (click)="handleAction(ticket.id, 'complete')">{{ 'COMPLETE' | translate }}</button>
+      <button mat-button class="skip" *ngIf="ticket.status === 'in_progress'"
+              (click)="handleAction(ticket.id, 'skip')">{{ 'SKIP' | translate }}</button>
+      <button mat-button class="transfer" *ngIf="ticket.status === 'in_progress'"
+              (click)="handleAction(ticket.id, 'transfer')">{{ 'TRANSFER' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 </div>
