@@ -14,5 +14,12 @@
   "TICKET": "Ticket",
   "TITLE": "Système de Gestion des Files",
   "TRANSFER": "Transférer",
-  "USERNAME": "Nom d'utilisateur"
+  "USERNAME": "Nom d'utilisateur",
+  "KIOSK KEY": "Kiosque Clé",
+  "SUBMIT": "Soumettre",
+  "ENTER KIOSK KEY": "Entrez la Clé du Kiosque",
+  "TICKET KIOSK": "Ticket Kiosque",
+  "CASHIER": "Caissier",
+  "CONSULTATION": "Conseils",
+  "OTHERS": "Autres"
 }

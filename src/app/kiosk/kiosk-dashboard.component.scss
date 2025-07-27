@@ -1,0 +1,58 @@
+@use '../../styles/_variables.scss' as variables;
+
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7fa;
+  font-family: "Roboto Thin", sans-serif;
+}
+
+.kiosk-card {
+  background: rgba(orange, variables.$opacity-low);
+  padding: 80px 40px;
+  border-radius: 16px;
+  border: solid variables.$orange-shade 1px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 2.5rem;
+  color: variables.$text-color-dark;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kiosk-btn {
+  font-size: 2rem;
+  padding: 60px;
+  border-radius: 12px;
+  color: variables.$text-color-light !important;
+  height: 2rem;
+
+  &.cashier {
+    background-color: variables.$green-shade;
+  }
+
+  &.consultation {
+    background-color: variables.$blue-shade
+  }
+
+  &.others {
+    background-color: variables.$orange-shade
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

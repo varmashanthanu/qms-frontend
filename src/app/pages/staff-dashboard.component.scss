@@ -1,23 +1,26 @@
-// Create a variable for opacity
-$opacity-level: 0.5;
+@use '../../styles/_variables.scss' as variables;
+
+body {
+  color: variables.$text-color-light;
+}
 
 .call:hover {
-  background: rgba(blue, $opacity-level);
+  background: rgba(variables.$blue-shade, variables.$opacity-medium);
   color: whitesmoke;
 
 }
 
 .complete:hover {
-  background: rgba(green, $opacity-level);
+  background: rgba(variables.$green-shade, variables.$opacity-medium);
   color: whitesmoke;
 }
 
 .skip:hover {
-  background: rgba(red, $opacity-level);
+  background: rgba(variables.$red-shade, variables.$opacity-medium);
   color: whitesmoke;
 }
 
 .transfer:hover {
-  background: rgba(orange, $opacity-level);
+  background: rgba(variables.$orange-shade, variables.$opacity-medium);
   color: whitesmoke;
 }

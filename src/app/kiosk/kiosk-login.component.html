@@ -1,0 +1,7 @@
+<h2>{{ 'ENTER KIOSK KEY' | translate }}</h2>
+<form (ngSubmit)="submit()">
+  <label for="key">{{ 'KIOSK KEY' | translate }}:</label>
+  <input type="text" id="key" [(ngModel)]="kioskKey" name="key" required />
+  <button type="submit">{{ 'SUBMIT' | translate}}</button>
+</form>
+<div *ngIf="error" style="color:red;">{{ error }}</div>

@@ -14,5 +14,12 @@
   "TICKET": "Ticket",
   "TITLE": "Queue Management System",
   "TRANSFER": "Transfer",
-  "USERNAME": "Username"
+  "USERNAME": "Username",
+  "KIOSK KEY": "Kiosk Key",
+  "SUBMIT": "Submit",
+  "ENTER KIOSK KEY": "Enter Kiosk Key",
+  "TICKET KIOSK": "Ticket Kiosk",
+  "CASHIER": "Cashier",
+  "CONSULTATION": "Consultation",
+  "OTHERS": "Others"
 }
