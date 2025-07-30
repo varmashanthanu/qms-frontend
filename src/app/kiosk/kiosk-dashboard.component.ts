@@ -11,7 +11,7 @@ import { TicketConfirmationDialogComponent } from '../components/ticket-confirma
 @Component({
   selector: 'app-kiosk-dashboard',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, TranslatePipe, TicketConfirmationDialogComponent],
+  imports: [CommonModule, MatButtonModule, TranslatePipe],
   templateUrl: './kiosk-dashboard.component.html',
   styleUrls: ['./kiosk-dashboard.component.scss']
 })
