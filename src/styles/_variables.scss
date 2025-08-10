@@ -1,11 +1,19 @@
-$blue-shade: rgb(64, 110, 231);
-$green-shade: rgb(83, 175, 92);
-$orange-shade: rgb(220, 105, 45);
-$violet-shade: rgb(145, 71, 230);
+$blue-shade: rgb(36, 99, 235);
+$brown-shade: rgb(124,45,18);
+$green-shade: rgb(25, 163, 74);
+$orange-shade: rgb(234, 88, 11);
 $red-shade: rgb(244, 67, 54);
-$brown-shade: rgb(115, 50, 27);
+$violet-shade: rgb(146, 52, 234);
+
+$light-blue-shade: rgb(239, 246, 255);
+$light-brown-shade: rgb(255, 245, 240);
+$light-green-shade: rgb(240, 253, 244);
+$light-orange-shade: rgb(254, 251, 233);
+$light-red-shade: rgb(255, 235, 230);
+$light-violet-shade: rgb(250, 245, 255);
+
+$opacity-high: 0.7;
 $opacity-low: 0.2;
 $opacity-medium: 0.5;
-$opacity-high: 0.7;
-$text-color-light: whitesmoke;
 $text-color-dark: $brown-shade;
+$text-color-light: whitesmoke;

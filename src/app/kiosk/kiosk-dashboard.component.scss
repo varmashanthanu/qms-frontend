@@ -11,7 +11,7 @@
 }
 
 .kiosk-card {
-  background: rgba(orange, variables.$opacity-low);
+  background: rgba(variables.$light-orange-shade, variables.$opacity-low);
   padding: 80px 40px;
   border-radius: 16px;
   border: solid variables.$orange-shade 1px;
