@@ -1,0 +1,23 @@
+# Use official Node 20 Alpine image for a lightweight dev environment
+FROM node:20-alpine
+
+# Set working directory inside container
+WORKDIR /app
+
+# Install Angular CLI globally
+RUN npm install -g @angular/cli@19.2.15
+
+# Copy package.json and package-lock.json (if exists) first to install dependencies
+COPY package*.json ./
+
+# Copy the rest of your Angular project files
+COPY . .
+
+# Install dependencies
+RUN npm install
+
+# Expose port 4200 (Angular default dev server port)
+EXPOSE 4200
+
+# Run Angular dev server, accessible externally
+CMD ["ng", "serve", "--host", "0.0.0.0", "--poll", "2000"]
