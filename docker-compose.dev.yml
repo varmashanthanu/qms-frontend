@@ -1,0 +1,15 @@
+
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules   # To avoid overwriting node_modules with host files
+    stdin_open: true
+    tty: true
+    environment:
+      - NG_CLI_ANALYTICS=false
